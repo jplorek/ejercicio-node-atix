@@ -1,0 +1,29 @@
+{
+  "name": "ejercicio-node-atix",
+  "version": "1.0.0",
+  "description": "Servicio web que escribe mensaje enviado por el  usuario en archivo csv",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -r dotenv/config index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jplorek/ejercicio-node-atix.git"
+  },
+  "author": "JPLorek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jplorek/ejercicio-node-atix/issues"
+  },
+  "homepage": "https://github.com/jplorek/ejercicio-node-atix#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "csv-parser": "^2.3.2",
+    "csv-writer": "^1.6.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2"
+  }
+}

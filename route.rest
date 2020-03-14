@@ -7,3 +7,8 @@ GET http://localhost:5000/api/messages
 
 ####
 POST http://localhost:5000/api/messages
+Content-Type: application/json
+
+{
+    "message": "Tercera prueba"
+}

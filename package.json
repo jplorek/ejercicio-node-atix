@@ -4,6 +4,7 @@
   "description": "Servicio web que escribe mensaje enviado por el  usuario en archivo csv",
   "main": "index.js",
   "scripts": {
+    "test": "mocha",
     "start": "nodemon -r dotenv/config index.js"
   },
   "repository": {
@@ -23,7 +24,9 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "dotenv": "^8.2.0",
+    "mocha": "^7.1.0",
     "nodemon": "^2.0.2"
   }
 }

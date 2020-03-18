@@ -36,7 +36,28 @@ function writeFile(newRow) {
     });
 }
 
+function getRows(){
+    return new Promise(async (resolve, reject) => {
+        try{
+            const dataFromFile = [];
+        const fileStream = fs.createReadStream(`./archive/blcokList.csv`);
+
+        fileStream.on('error', error => reject(error));
+
+        fileStream
+            .pipe(csv(['prev_hash', 'message', 'nonce']))
+            .on('data', data => dataFromFile.push(data))
+            .on('end', () => {
+                resolve(dataFromFile);
+            });
+        }catch(error){
+            reject(error);
+        }
+    });
+}
+
 module.exports = {
     readFile,
-    writeFile
+    writeFile,
+    getRows
 }

@@ -12,4 +12,4 @@ function generateHash(rowToHash, msg, nonce){
     return generateHash(rowToHash, msg, nonce);
 }
 
-module.exports = { generateHash };
+module.exports = generateHash;
